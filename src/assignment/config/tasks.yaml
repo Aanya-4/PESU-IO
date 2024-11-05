@@ -1,0 +1,46 @@
+real_time_stock_data_task:
+  description: >
+    Get the latest stock information for specific companies. This includes 
+    the current price, highest and lowest prices for the day, and how many 
+    shares have been traded. Make sure the information is accurate.
+  expected_output: >
+    A list showing:
+    - Current Price
+    - Daily High Price
+    - Daily Low Price
+    - Trading Volume (number of shares traded)
+  agent: real_time_stock_data_agent
+
+trend_analysis_task:
+  description: >
+    Look at the stock prices over a certain time (like the last week or month) 
+    to see if they are going up, down, or staying the same. Identify any trends 
+    or changes in direction.
+  expected_output: >
+    A report that includes:
+    - The trend (up, down, or stable)
+    - Signs of how strong the trend is
+    - Any hints that the price might change direction
+  agent: trend_analysis_agent
+
+news_summary_task:
+  description: >
+    Find and review recent news articles about the chosen stock. Determine if 
+    the news is positive, neutral, or negative, and summarize important headlines 
+    that could affect the stock.
+  expected_output: >
+    A summary that includes:
+    - Sentiment (positive, neutral, or negative)
+    - Key news headlines and what they mean for the stock
+  agent: news_summary_agent
+
+recommendation_task:
+  description: >
+    Combine the stock information, trend analysis, and news summary to give a 
+    simple investment recommendation (like buy, sell, or hold). Make it clear 
+    and easy to understand.
+  expected_output: >
+    A recommendation for the stock that says:
+    - Buy, Sell, or Hold
+    - Why this decision is suggested
+  agent: recommendation_agent
